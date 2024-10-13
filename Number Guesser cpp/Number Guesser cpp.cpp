@@ -5,13 +5,9 @@ using namespace std;
 
 int randint(int min, int max)
 {
-    random_device rd;   // Seed for the random number engine
-    mt19937 gen(rd());  // Mersenne Twister engine to generate random numbers
-
-    // Define a distribution to generate random numbers between 1 and 100
+    random_device rd;
+    mt19937 gen(rd());
     uniform_int_distribution<> distrib(min, max);
-
-    // Generate and print a random number
     return distrib(gen);
 }
 
